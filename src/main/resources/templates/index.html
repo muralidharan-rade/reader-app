@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,6 +14,12 @@
     <div>
     	<h1>Login</h1>
       	With GitHub: <a href="/oauth2/authorization/github">click here</a>
+    </div>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4 space-bottom">Or search for a book</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <div th:insert="components/search-book :: search-panel"></div>
+      </div>
     </div>
   </body>
 </html>
